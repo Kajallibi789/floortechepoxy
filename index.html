@@ -1,88 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SPA Static Site</title>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="styles/footer.css" />
-</head>
-<body class="flex flex-col min-h-screen">
-  <header class="bg-blue-700 text-white p-4">
-    <nav class="flex gap-4">
-      <a href="#" data-page="home" class="hover:underline">Home</a>
-      <a href="pages/about.html" data-page="about" class="hover:underline">About</a>
-      <a href="pages/services.html" data-page="services" class="hover:underline">Services</a>
-      <a href="pages/contact.html" data-page="contact" class="hover:underline">Contact</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPA Static Site</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/footer.css" />
+    <script src="/js/include.js"></script>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    
+      <div id="header" data-include="/components/header.html"></div>
 
-  <main id="content" class="p-6 flex-grow">
-    Loading...
-  </main>
+      <main id="content" class="p-6 flex-grow">Loading...</main>
 
-<footer class="footer">
-  <div class="footer-container">
-      <div class="grid-container">
-        <div class="column column1">  
-            <img src="assets/logo.png" alt="FTC Logo" class="logo" />
-          <p class="company-name">Floor Tech-Epoxy Flooring Co. ,Kuwait</p>
-          <p><span class="icon">📍</span> Kuwait</p>
-          <p><span class="icon">✉️</span> floortechkw@gmail.com</p>
-          <p><span class="icon">📞</span> +965-99240475</p>
-          <p><span class="icon">📞</span> +965-55820603</p>
-        </div>
-        <div class="column column2">
-          <span >Quick Links</span>
-          <ul>
-            <li class="column-home blue-hover"><a href="#">Home</a></li>
-            <li><a href="#" class="blue-hover">About Us</a></li>
-            <li><a href="#" class="blue-hover">Services</a></li>
-            <li><a href="#" class="blue-hover">Contact</a></li>
-          </ul>
-        </div>
-        <div class="column column3">
-          <span>Services</span>
-          <div class="service-grid-container">
-            <div class="blue-hover">EPOXY FLOORINGS</div>
-            <div class="blue-hover">EPU FLOORINGS</div>
-            <div class="blue-hover">PU FLOORINGS</div>
-            <div class="blue-hover">EP-PU FLOORINGS</div>
-            <div class="blue-hover">ESD FLOORINGS</div>
-            <div class="blue-hover">PU CONCRETE FLOORINGS</div>
-            <div class="blue-hover">GREEN FLOORS</div>
-            <div class="blue-hover">POLY ASPARTIC FLOORINGS</div>
-            <div class="blue-hover">ONE-DAY FLOORINGS</div>
-            <div class="blue-hover">DENSI POdivSHED FLOORS</div>
-            <div class="blue-hover">DECK COATINGS</div>        
+      <!-- <footer class="footer w-full">
+        <div class="footer-container">
+          <div class="grid-container">
+            <div class="column column1">
+              <img src="assets/logo.png" alt="FTC Logo" class="logo" />
+              <p class="company-name">Floor Tech-Epoxy Flooring Co. ,Kuwait</p>
+              <p><span class="icon">📍</span> Kuwait</p>
+              <p><span class="icon">✉️</span> floortechkw@gmail.com</p>
+              <p><span class="icon">📞</span> +965-99240475</p>
+              <p><span class="icon">📞</span> +965-55820603</p>
+            </div>
+            <div class="column column2">
+              <span>Quick Links</span>
+              <ul>
+                <li class="column-home blue-hover"><a href="#">Home</a></li>
+                <li><a href="#" class="blue-hover">About Us</a></li>
+                <li><a href="#" class="blue-hover">Services</a></li>
+                <li><a href="#" class="blue-hover">Contact</a></li>
+              </ul>
+            </div>
+            <div class="column column3">
+              <span>Services</span>
+              <div class="service-grid-container">
+                <div class="blue-hover">EPOXY FLOORINGS</div>
+                <div class="blue-hover">EPU FLOORINGS</div>
+                <div class="blue-hover">PU FLOORINGS</div>
+                <div class="blue-hover">EP-PU FLOORINGS</div>
+                <div class="blue-hover">ESD FLOORINGS</div>
+                <div class="blue-hover">PU CONCRETE FLOORINGS</div>
+                <div class="blue-hover">GREEN FLOORS</div>
+                <div class="blue-hover">POLY ASPARTIC FLOORINGS</div>
+                <div class="blue-hover">ONE-DAY FLOORINGS</div>
+                <div class="blue-hover">DENSI POdivSHED FLOORS</div>
+                <div class="blue-hover">DECK COATINGS</div>
+              </div>
+            </div>
+            <div class="column column4">
+              <span>Social Media</span>
+              <p>
+                Transform your space with Floor Tech’s cutting-edge flooring
+                solutions
+              </p>
+              <div class="social-icons">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100014120197598"
+                  target="_blank"
+                >
+                  <img
+                    src="./assets/facebook-1-svgrepo-com.svg"
+                    alt="Facebook"
+                  />
+                </a>
+                <a href="#" target="_blank"
+                  ><img src="assets/twitter-svgrepo-com.svg" alt="Twitter"
+                /></a>
+                <a href="#" target="_blank" class="instagram">
+                  <img src="assets/instagram.svg" alt="Instagram" />
+                </a>
+                <a href="#" target="_blank"
+                  ><img src="assets/linkedin-icon.svg" alt="LinkedIn"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            Powered By QBS Copyright © 2024. Floor Tech All rights reserved.
           </div>
         </div>
-        <div class="column column4">
-          <span>Social Media</span>
-          <p>Transform your space with Floor Tech’s cutting-edge flooring solutions</p>
-          <div class="social-icons">
-          <a href="https://www.facebook.com/profile.php?id=100014120197598" target="_blank">
-            <img src="./assets/facebook-1-svgrepo-com.svg" alt="Facebook">
-          </a>
-          <a href="#" target="_blank"><img src="assets/twitter-svgrepo-com.svg" alt="Twitter" /></a>
-          <a href="#" target="_blank" class="instagram">
-            <img src="assets/instagram.svg" alt="Instagram">
-          </a>
-          <a href="#" target="_blank"><img src="assets/linkedin-icon.svg" alt="LinkedIn" /></a>
-          </div>
-          </div>      
-      </div>
-      <div class="footer-bottom">
-        Powered By QBS Copyright © 2024. Floor Tech All rights reserved.
-      </div>
-    </div>
+      </footer> -->
 
-</footer> 
-
-
-  <!-- Script -->
-  <script src="assets/script.js"></script>
-</body>
+      <!-- Script -->
+      <script src="assets/script.js"></script>
+    
+  </body>
 </html>
