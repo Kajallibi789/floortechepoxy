@@ -1,4 +1,4 @@
- * {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -8,10 +8,61 @@
   font-size: 16px;
 }
 
+main{
+
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+  h2{
+    font-size: 32px;
+    font-family: Archivo, sans-serif;
+    color: #0e2b5c;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+
+  p{
+    color: #7e8a96;
+    font-family: Heebo, sans-serif;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .container{
+      width: 1080px;
+
+    .content-description{
+      display: flex;
+      padding-left: 10px;
+
+      .column-list{
+        padding-left: 30px;
+
+        .list-contents{
+          padding-left: 20px;
+
+          i{
+            margin-right: 5px;
+          }
+
+          p{
+            margin-bottom: 10px;
+            color: #353535;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
 .footer {
   background-color: #00173E;
   color: white;
-  font-family: Arial, sans-serif;
   position: relative;
   padding: 40px 20px 20px 20px;
   min-width: 550px;
@@ -142,6 +193,35 @@
 }
 
 @media (max-width: 600px) {
+
+    main{
+
+      p{
+        font-size: 14px;
+      }
+
+      .container{
+        .content-description{
+          flex-direction: column;
+          gap: 30px;
+
+          .flex-item{
+            flex: 1;
+          }
+
+          .column-list{
+            .list-contents{
+              p{
+                font-size: 14px;
+              }
+            }
+         
+          }
+        }
+
+      }
+  }
+
   .footer .footer-container .grid-container {
     grid-template-columns: 1fr;
     /* height: 1337px; */
@@ -161,6 +241,35 @@
 }
 
 @media (min-width: 601px) and (max-width: 1092px) {
+
+      main{
+
+        p{
+          font-size: 16px;
+        }
+
+      .container{
+        .content-description{
+          flex-direction: column;
+          gap: 30px;
+
+          .flex-item{
+            flex: 1;
+          }
+
+          .column-list{
+            .list-contents{
+              p{
+                font-size: 14px;
+              }
+            }
+         
+          }
+        }
+
+      }
+  }
+
   .footer .footer-container .grid-container {
     grid-template-columns: 1fr 1fr;
   }
