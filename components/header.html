@@ -1,128 +1,106 @@
-<header class="bg-white ">
-  <div class="w-full lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-6">
+<header class="bg-white shadow-md">
+  <!-- Top Header -->
+  <div class="w-full lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
     <!-- Logo + Company Name -->
     <div class="flex items-center gap-2">
-      <img
-        src="./assets/logo.png"
-        alt="Floor Tech Epoxy Logo"
-        class="w-20 h-20"
-      />
+      <img src="./assets/logo.png" alt="Floor Tech Epoxy Logo" class="w-12 h-12 md:w-20 md:h-20" />
       <h1 class="text-xl font-bold text-gray-800 leading-tight">
-        FLOOR TECH-EPOXY<br />
-        FLOORING CO
+        FLOOR TECH-EPOXY<br />FLOORING CO
       </h1>
     </div>
 
-    <!-- Contact Info -->
-    <div class="hidden md:gap-6 gap-2 md:flex">
-      <div class="flex flex-wrap items-center gap-3 text-gray-700">
-        <div class="flex items-center gap-0">
-          <img src="/assets/building.png" alt="Location" class="w-6 h-6 md:w-8 md:h-8" />
-          <span class="md:text-sm text-xs">Kuwait</span>
+    <!-- Contact Info (Desktop only) -->
+    <div class="lg:flex gap-3 hidden">
+      <div class="hidden md:flex gap-2 text-right text-gray-700 text-sm">
+        <div class="flex items-center gap-2 justify-end">
+          <img src="/assets/building.png" alt="Location" class="w-5 h-5" />
+          <span>Kuwait</span>
         </div>
-        <div class="flex items-center gap-1">
-          <img src="/assets/call.png" alt="Location" class="w-6 h-6 md:w-8 md:h-8" />
-          <span class="md:text-sm text-xs">+965-23912002</span>
+        <div class="flex items-center gap-2 justify-end">
+          <img src="/assets/call.png" alt="Phone" class="w-5 h-5" />
+          <span>+965-23912002</span>
         </div>
-        <div class="flex items-center gap-2">
-          <img src="/assets/mail.png" alt="Location" class="w-6 h-6 md:w-8 md:h-8" />
-          <span class="md:text-sm text-xs">floortechkw@gmail.com</span>
+        <div class="flex items-center gap-2 justify-end">
+          <img src="/assets/mail.png" alt="Email" class="w-5 h-5" />
+          <span>floortechkw@gmail.com</span>
         </div>
       </div>
-
-      <!-- Book Now Button -->
+      <!-- Book Now (Desktop only) -->
       <div class="hidden lg:flex">
-        <a href="/contact.html" class=" inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 md:text-sm text-xs">Book Now</a>
+        <a href="/contact.html" class="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm">Book Now</a>
       </div>
+    </div>
+
+    <!-- Hamburger Button (Mobile only) -->
+    <div class="md:hidden">
+      <button id="mobile-menu-button" class="text-blue-900 focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+             xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
   </div>
 
-  <!-- Navigation -->
-  <nav class="bg-blue-900 text-white">
-    <div
-      class="w-full lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-2"
-    >
+  <!-- Desktop Nav -->
+  <nav class="bg-blue-900 text-white hidden md:flex">
+    <div class="w-full lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-2">
       <ul class="flex space-x-4">
         <li><a href="/index.html" class="hover:underline">Home</a></li>
         <li><a href="/about.html" class="hover:underline">About</a></li>
         <li class="relative group">
           <a href="#" class="hover:underline">Service ▾</a>
-          <!-- Dropdown -->
-          <ul
-            class="absolute left-0 mt-2 w-48 bg-white text-black rounded shadow-md hidden group-hover:block z-10"
-          >
-            <li>
-              <a
-                href="/services/epoxy-flooring.html"
-                class="block px-4 py-2 hover:bg-blue-100"
-                >Epoxy Flooring</a
-              >
-            </li>
-            <li>
-              <a
-                href="/services/epu-floorings.html"
-                class="block px-4 py-2 hover:bg-blue-100"
-                >Epu Floorings</a
-              >
-            </li>
-            <li>
-              <a
-                href="/services/pu-flooring.html"
-                class="block px-4 py-2 hover:bg-blue-100"
-                >PU Flooring</a
-              >
-            </li>
-            <li>
-              <a
-                href="/services/ep-pu-flooring.html"
-                class="block px-4 py-2 hover:bg-blue-100"
-                >Ep-pu Flooring</a
-              >
-            </li>
-            <li>
-              <a
-                href="/services/esd-floorings.html"
-                class="block px-4 py-2 hover:bg-blue-100"
-                >Esd Floorings</a
-              >
-            </li>
-            <li>
-              <a
-                href="/services/pu-concrete.html"
-                class="block px-4 py-2 hover:bg-blue-100"
-                >PU Concrete Floorings</a
-              >
-            </li>
-            <li>
-              <a
-                href="/services/green-floors.html"
-                class="block px-4 py-2 hover:bg-blue-100"
-                >Green Floors</a
-              >
-            </li>
+          <ul class="absolute left-0 mt-2 w-48 bg-white text-black rounded shadow-md hidden group-hover:block z-10">
+            <li><a href="/services/epoxy-flooring.html" class="block px-4 py-2 hover:bg-blue-100">Epoxy Flooring</a></li>
+            <li><a href="/services/epu-floorings.html" class="block px-4 py-2 hover:bg-blue-100">Epu Floorings</a></li>
+            <li><a href="/services/pu-flooring.html" class="block px-4 py-2 hover:bg-blue-100">PU Flooring</a></li>
+            <li><a href="/services/ep-pu-flooring.html" class="block px-4 py-2 hover:bg-blue-100">Ep-pu Flooring</a></li>
+            <li><a href="/services/esd-floorings.html" class="block px-4 py-2 hover:bg-blue-100">Esd Floorings</a></li>
+            <li><a href="/services/pu-concrete.html" class="block px-4 py-2 hover:bg-blue-100">PU Concrete</a></li>
+            <li><a href="/services/green-floors.html" class="block px-4 py-2 hover:bg-blue-100">Green Floors</a></li>
           </ul>
         </li>
         <li><a href="/contact.html" class="hover:underline">Contact</a></li>
       </ul>
 
-      <!-- Social Icons (Optional) -->
+      <!-- Social Icons -->
       <div class="flex space-x-2">
-        <a href="#"
-          ><img src="/assets/facebook-icon.svg" alt="Facebook" class="w-5 h-5"
-        /></a>
-        <a href="#"
-          ><img src="/assets/twitter-icon.svg" alt="Twitter" class="w-5 h-5"
-        /></a>
-        <a href="#"
-          ><img
-            src="/assets/instagram-icon.svg"
-            alt="Instagram"
-            class="w-5 h-5"
-        /></a>
-        <a href="#"
-          ><img src="/assets/linkedin-icon.svg" alt="LinkedIn" class="w-5 h-5"
-        /></a>
+        <a href="#" class="group relative w-5 h-5 inline-block">
+          <img src="/assets/fb.png" alt="Facebook" class="absolute inset-0 w-5 h-5 group-hover:opacity-0 transition-opacity" />
+          <img src="/assets/fb_hover.png" alt="Facebook Hover" class="absolute inset-0 w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+        </a>
+        <a href="#" class="group relative w-5 h-5 inline-block">
+          <img src="/assets/insta.png" alt="Facebook" class="absolute inset-0 w-5 h-5 group-hover:opacity-0 transition-opacity" />
+          <img src="/assets/insta_hover.png" alt="Facebook Hover" class="absolute inset-0 w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity" />
+        </a>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Nav -->
+<div id="mobile-menu" class="md:hidden hidden absolute  left-0 w-full h-screen bg-blue-900 text-white px-4 py-4 z-50">
+  <ul class="space-y-4">
+    <li><a href="/index.html" class="block">Home</a></li>
+    <li><a href="/about.html" class="block">About</a></li>
+    <li>
+      <details class="group">
+        <summary class="cursor-pointer">Service</summary>
+        <ul class="pl-4 pt-2 space-y-1">
+          <li><a href="/services/epoxy-flooring.html">Epoxy Flooring</a></li>
+          <li><a href="/services/epu-floorings.html">Epu Floorings</a></li>
+          <li><a href="/services/pu-flooring.html">PU Flooring</a></li>
+          <li><a href="/services/ep-pu-flooring.html">Ep-pu Flooring</a></li>
+          <li><a href="/services/esd-floorings.html">Esd Floorings</a></li>
+          <li><a href="/services/pu-concrete.html">PU Concrete</a></li>
+          <li><a href="/services/green-floors.html">Green Floors</a></li>
+        </ul>
+      </details>
+    </li>
+    <li><a href="/contact.html" class="block">Contact</a></li>
+    <li><a href="/contact.html" class="block bg-white text-blue-900 mt-2 px-4 py-3 rounded mt-2">Book Now</a></li>
+  </ul>
+</div>
 </header>
+
+
