@@ -1,4 +1,4 @@
-// ...existing code...
+// include.js
 document.addEventListener("DOMContentLoaded", function () {
   const includes = document.querySelectorAll('[data-include]');
   includes.forEach(el => {
