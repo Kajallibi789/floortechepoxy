@@ -33,26 +33,26 @@
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/footer.css" />
-    <script src="/js/include.js"></script>
+    <script src="./js/include.js"></script>
   </head>
   <body class="flex flex-col min-h-screen">
-    <div id="header" data-include="/components/header.html"></div>
+    <div id="header" data-include="./components/header.html"></div>
     <!-- Hero Slider Section -->
     <section class="relative w-full h-[80vh] sm:h-[90vh] overflow-hidden ">
       <!-- Slideshow container -->
       <div id="slider" class="absolute inset-0 w-full h-full">
         <img
-          src="/assets/epoxy1.jpg"
+          src="./assets/epoxy1.jpg"
           alt="Slide 1"
           class="w-full h-full object-cover absolute fade-slide opacity-100 transition-opacity duration-1000"
         />
         <img
-          src="/assets/epoxy2.jpg"
+          src="./assets/epoxy2.jpg"
           alt="Slide 2"
           class="w-full h-full object-cover absolute fade-slide opacity-0 transition-opacity duration-1000"
         />
         <img
-          src="/assets/epoxy3.jpg"
+          src="./assets/epoxy3.jpg"
           alt="Slide 3"
           class="w-full h-full object-cover absolute fade-slide opacity-0 transition-opacity duration-1000"
         />
@@ -73,11 +73,11 @@
     </section>
 
     <main id="content" class="p-6 flex-grow">Loading...</main>
-    <div id="footer" data-include="/components/footer.html"></div>
+    <div id="footer" data-include="./components/footer.html"></div>
 
 
     <!-- Script -->
-    <script src="assets/script.js"></script>
+    <script src="./assets/script.js"></script>
     <script>
       window.addEventListener('DOMContentLoaded', () => {
         const slides = document.querySelectorAll('.fade-slide')
