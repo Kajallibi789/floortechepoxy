@@ -1,33 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SPA Static Site</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="flex flex-col min-h-screen">
-  <!-- Header -->
-  <header class="bg-blue-700 text-white p-4">
-    <nav class="flex gap-4">
-      <a href="../index.html" data-page="home" class="hover:underline">Home</a>
-      <a href="./about.html" data-page="about" class="hover:underline">About</a>
-      <a href="./services.html" data-page="services" class="hover:underline">Services</a>
-      <a href="./contact.html" data-page="contact" class="hover:underline">Contact</a>
-    </nav>
-  </header>
+<section id="about-us" class=" mx-auto bg-[#0E2B5C] mt-2">
 
-  <!-- Main Content -->
-  <main id="content" class="p-6 flex-grow">
-    Service
-  </main>
+  <div class="max-w-5xl container mx-auto px-4 py-12">
+    <div class="flex flex-col gap-4 items-start p-6 text-white">
+      <h4 class="text-[#2296F9]">Our Services</h4>
+      <h2 class="text-3xl font-extrabold">What We Do</h2>
+      <p>Transform your floor with our comprehensive range of premium floors</p>
+    </div>
+    <div class="relative">
+      <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 p-2 z-10">
+        <img src="../assets/left-arrow.svg" alt="left" class="w-6">
+      </button>
+      <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 p-2 z-10">
+        <img src="../assets/right-arrow.svg" alt="right" class="w-6">
+      </button>
+      <div class="overflow-hidden">
+        <div id="carousel" class="carousel-container flex gap-6 overflow-x-auto py-8 px-2">
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center py-4">
-    © 2025 Your Site
-  </footer>
+        </div>
+      </div>
 
-  <!-- Script -->
-  <script src="assets/script.js"></script>
-</body>
-</html>
+    </div>
+  </div>
+</section>
