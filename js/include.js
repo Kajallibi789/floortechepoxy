@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (includeSrc.includes("services.html")) {
           initCarousel(); // call your carousel init function here
         }
+        if (includeSrc.includes("whatwedo.html")) {
+          initWhatwedo(); // call your carousel init function here
+        }
 
         // Add this block to attach the toggle after header is loaded
         setupMobileMenuToggle();
@@ -47,7 +50,7 @@ function initCarousel() {
     },
     {
       title: "PU Flooring",
-      image: "../assets/EPU-FLOORINGS-services.jpg",
+      image: "../assets/puflooring.webp",
       link: "../services/pu-flooring.html"
     },
     {
@@ -101,7 +104,7 @@ function initCarousel() {
     <a href="${item.link}" class="block h-full">
       <div class="relative">
         <img src="${item.image}" alt="${item.title}" class="w-full h-48 object-cover">
-        <div class="absolute top-2 right-2 bg-white text-gray-900 rounded-full py-2 px-2 shadow-lg transition-transform">
+        <div class="absolute top-2 right-2 bg-white hover:bg-gray-200 text-gray-900 rounded-full py-2 px-2 shadow-lg transition-transform">
           <img src="../assets/link.svg" alt="link" class="w-4">
         </div>
       </div>
@@ -112,6 +115,14 @@ function initCarousel() {
   `;
     carousel.appendChild(card);
   });
+}
+
+function initWhatwedo() {
+  const bullet = '<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Arrow / Arrow_Circle_Right"> <path id="Vector" d="M13 15L16 12M16 12L13 9M16 12H8M21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12Z" stroke="#2296f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>';
+  const bulletNames = document.getElementsByClassName("bullet-point");
+  for (let i = 0; i < bulletNames.length; i++) {
+    bulletNames[i].innerHTML = bullet;
+  }
 }
 
 // Avoid attaching multiple listeners
@@ -125,7 +136,6 @@ function setupMobileMenuToggle() {
     mobileMenuButton.replaceWith(newButton);
 
     newButton.addEventListener("click", () => {
-      console.log("hit");
       mobileMenu.classList.toggle("hidden");
     });
   }
