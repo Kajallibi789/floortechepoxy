@@ -1,0 +1,35 @@
+<section id="contact" class="bg-[#EEEEEE] py-10 text-xs md:text-sm min-h-screen flex items-center justify-center">
+  <div class="max-w-5xl container mx-auto px-4 flex flex-col md:flex-row gap-8 h-full">
+
+    <!-- Contact Form -->
+    <div class="w-full md:w-1/2">
+      <h2 class="text-3xl text-[#0E2B5C] font-bold mb-4">Contact Us</h2>
+      <form action="https://formspree.io/f/mgvylrga" method="POST" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required
+          class="w-full px-4 py-2 border border-gray-300 rounded" />
+
+        <input type="email" name="email" placeholder="Your Email" required
+          class="w-full px-4 py-2 border border-gray-300 rounded" />
+
+        <input type="tel" name="whatsapp" placeholder="WhatsApp Number Preferably" required
+          class="w-full px-4 py-2 border border-gray-300 rounded" />
+
+        <textarea name="message" placeholder="Your Message" rows="4" required
+          class="w-full px-4 py-2 border border-gray-300 rounded"></textarea>
+
+        <button type="submit"
+          class="bg-[#0E2B5C] text-white px-6 py-2 rounded hover:bg-blue-800 transition">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Optional: Keep your map here or reuse the previous map layout -->
+    <div class="w-full md:w-1/2">
+      <h2 class="text-3xl text-[#0E2B5C] font-bold mb-4">Our Location</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d313.27733750945146!2d48.134088003882425!3d29.080374300116887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf07622f0cd8cf%3A0x30619dcaaaa0ab03!2z2LTYsdmD2Kkg2YTYp9mK2Kog2YPZhtisINmE2YTYp9iv2YjYp9iqINin2YTZg9mH2LHYqNin2KbZitipINin2YTZgdit2YrYrdmK2YQ!5e0!3m2!1sen!2skw!4v1750510905789!5m2!1sen!2skw"
+        class="w-full h-64 md:h-full border-4 border-[#0E2B5C]" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>

@@ -9,17 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
         el.innerHTML = data;
 
         if (includeSrc.includes("services.html")) {
-          initCarousel(); // call your carousel init function here
+          initCarousel();
         }
         if (includeSrc.includes("whatwedo.html")) {
-          initWhatwedo(); // call your carousel init function here
+          initWhatwedo();
         }
 
-        // Add this block to attach the toggle after header is loaded
         setupMobileMenuToggle();
+        initScrollAnimations(); // ✅ attach fade-in animations
       });
   });
+
+  initScrollAnimations(); // ✅ also run once in case content is already in page
 });
+
 
 function initCarousel() {
   const carousel = document.getElementById("carousel");
@@ -139,4 +142,22 @@ function setupMobileMenuToggle() {
       mobileMenu.classList.toggle("hidden");
     });
   }
+}
+
+function initScrollAnimations() {
+  const elements = document.querySelectorAll('.fade-in-on-scroll');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('opacity-100', 'translate-y-0');
+        entry.target.classList.remove('opacity-0', 'translate-y-5');
+        obs.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, {
+    threshold: 0.2 // Adjust how much of the element needs to be visible
+  });
+
+  elements.forEach(el => observer.observe(el));
 }
