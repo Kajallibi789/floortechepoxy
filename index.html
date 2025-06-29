@@ -9,63 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    @keyframes kenburns {
-      0% {
-        transform: scale(1);
-      }
-
-      100% {
-        transform: scale(1.1);
-      }
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Style for the horizontal scrollbar in the carousel */
-    #carousel {
-      scrollbar-width: thin;
-      /* Firefox */
-      scrollbar-color: #2296F9 #0E2B5C;
-      /* Firefox */
-    }
-
-    /* Chrome, Edge, and Safari */
-    #carousel::-webkit-scrollbar {
-      height: 8px;
-      background: #0E2B5C;
-    }
-
-    #carousel::-webkit-scrollbar-thumb {
-      background: #2296F9;
-      border-radius: 4px;
-    }
-
-    #carousel::-webkit-scrollbar-thumb:hover {
-      background: #176bb3;
-    }
-
-    .fade-slide {
-      animation: kenburns 8s ease-in-out infinite;
-      animation-play-state: paused;
-    }
-
-    .fade-slide.opacity-100 {
-      animation-play-state: running;
-    }
-
-    .product-card {
-      transition: transform 0.3s ease;
-    }
-
-    .product-card:hover {
-      transform: scale(1.05);
-    }
-  </style>
+<link rel="stylesheet" href="./styles/index.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles/footer.css" />
+  <link rel="stylesheet" href="styles/header.css" />
   <script src="./js/include.js"></script>
 </head>
 

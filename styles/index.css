@@ -1,0 +1,53 @@
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style for the horizontal scrollbar in the carousel */
+#carousel {
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: #2296f9 #0e2b5c;
+  /* Firefox */
+}
+
+/* Chrome, Edge, and Safari */
+#carousel::-webkit-scrollbar {
+  height: 8px;
+  background: #0e2b5c;
+}
+
+#carousel::-webkit-scrollbar-thumb {
+  background: #2296f9;
+  border-radius: 4px;
+}
+
+#carousel::-webkit-scrollbar-thumb:hover {
+  background: #176bb3;
+}
+
+.fade-slide {
+  animation: kenburns 8s ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+.fade-slide.opacity-100 {
+  animation-play-state: running;
+}
+
+.product-card {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}

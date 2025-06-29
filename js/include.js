@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(data => {
         el.innerHTML = data;
 
+        if (includeSrc.includes("header.html")) {
+    requestAnimationFrame(() => {
+    });}
         if (includeSrc.includes("services.html")) {
           initCarousel();
         }
@@ -22,6 +25,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   initScrollAnimations(); // ✅ also run once in case content is already in page
 });
+
+function initHeader() {
+  const mainNav = document.querySelector('.main-nav');
+
+
+  window.addEventListener('scroll', function () {
+    if (this.scrollY > 200) {
+      mainNav.classList.add('slidedown', 'backdrop-blur-md', 'bg-blue-900/50');
+
+    } else {
+      mainNav.classList.remove('slidedown', 'backdrop-blur-md', 'bg-blue-900/50');
+
+    }
+  });
+}
 
 
 function initCarousel() {

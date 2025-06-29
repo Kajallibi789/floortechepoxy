@@ -1,0 +1,17 @@
+
+.main-nav.slidedown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: slidedown 0.4s forwards;
+  z-index: 50;
+}
+@keyframes slidedown {
+  from {
+    top: -250px;
+  }
+  to {
+    top: 0;
+  }
+}
