@@ -9,8 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
         el.innerHTML = data;
 
         if (includeSrc.includes("header.html")) {
-    requestAnimationFrame(() => {
-    });}
+        requestAnimationFrame(() => {
+          initHeader();
+        });}
         if (includeSrc.includes("services.html")) {
           initCarousel();
         }
