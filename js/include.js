@@ -40,16 +40,25 @@ function initHeader() {
 
     }
   });
-  const hash = window.location.hash;
+const bookNowLinks = document.querySelectorAll('.book-now-link');
+    const isOnHomePage = window.location.pathname.includes('/');
+    bookNowLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (!isOnHomePage) {
+          e.preventDefault();
+          window.location.href = '/#contact'; // Adjust if your homepage is at a different path
+        }
+        // Else: allow default behavior (smooth scroll via CSS or script)
+      });
+    });
 
-    if (hash === "#contact") {
-      const contactSection = document.querySelector("#contact");
-
-      // Use smooth scrolling
-      if (contactSection) {
+    // On homepage load, scroll if hash is present
+    if (isOnHomePage && window.location.hash === '#contact') {
+      const el = document.querySelector('#contact');
+      if (el) {
         setTimeout(() => {
-          contactSection.scrollIntoView({ behavior: "smooth" });
-        }, 200); // Small delay for DOM to be ready
+          el.scrollIntoView({ behavior: 'smooth' });
+        }, 100); // Delay ensures DOM is ready
       }
     }
 }
