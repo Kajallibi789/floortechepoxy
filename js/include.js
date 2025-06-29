@@ -40,6 +40,18 @@ function initHeader() {
 
     }
   });
+  const hash = window.location.hash;
+
+    if (hash === "#contact") {
+      const contactSection = document.querySelector("#contact");
+
+      // Use smooth scrolling
+      if (contactSection) {
+        setTimeout(() => {
+          contactSection.scrollIntoView({ behavior: "smooth" });
+        }, 200); // Small delay for DOM to be ready
+      }
+    }
 }
 
 
